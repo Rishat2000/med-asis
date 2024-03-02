@@ -1,1 +1,28 @@
 @import '../../styles/style.scss';
+
+.header {
+	padding: toRem(40) toRem(0);
+	&__container {
+		display: flex;
+		span {
+			flex: 1 1 auto;
+		}
+	}
+
+	&__list {
+		display: flex;
+		align-items: center;
+		gap: toRem(20);
+	}
+
+	&__item {
+		transition: all 0.5s;
+		&:not(:last-child) {
+			@media (any-hover: hover) {
+				&:hover {
+					color: #9ab3b7;
+				}
+			}
+		}
+	}
+}
